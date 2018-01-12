@@ -1,6 +1,5 @@
 /**
- * A main class for the GuessingGame.
- * It is responsible for creating objects, 
+ * A main class for the GuessingGame. It is responsible for creating objects,
  * connecting objects, and running the game UI.
  */
 public class Main {
@@ -10,9 +9,9 @@ public class Main {
 		NumberGame game = new GuessingGame(upperBound);
 //		GameConsole ui = new GameConsole( );
 //		int solution = ui.play( game );
-//		//TODO display the answer returned by play
+
 //		System.out.println("The answer is "+solution);
-//		//TODO display how many guesses the user made
+
 		GameSolver ai = new GameSolver();
 		int bot = ai.play(game);
 		System.out.println("The answer is "+bot);

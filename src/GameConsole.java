@@ -23,9 +23,7 @@ public class GameConsole {
 		System.out.println(game.getMessage());
 		System.out.println("Count: "+game.getCount());
 		return guess;
-//		boolean correct = game.guess(guess);
-//		System.out.println( game.getMessage() );
-//		return guess;
+
 	}
 	
 }
