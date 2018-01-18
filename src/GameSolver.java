@@ -18,37 +18,18 @@ public class GameSolver {
 	 * @return the secret number.
 	 */
 	public int play(NumberGame game) {
-//		int count = 0;
-//		int constant = game.getUpperBound() / 2;
-//		int answer = constant;
-//		int branch = 2;
-//		while (!game.guess(answer)) {
-//			count += 1;
-//			System.out.println("Count: " + count);
-//			System.out.println(answer);
-//			
-//			if (game.getMessage().contains("too small")) {
-//				answer = answer + constant / branch;
-//			} else if (game.getMessage().contains("too large")) {
-//				answer = answer - constant / branch;
-//			}
-//			if(constant / branch >1){
-//				branch = branch * 2; 
-//			}
-//		}
-//		return answer;
 		int min = 1;
 		int max = game.getUpperBound();
 		int guess = min + (max - min) / 2;
-		while(!game.guess(guess)){
+		while (!game.guess(guess)) {
 			System.out.println(guess);
-			if(game.getMessage().contains("too large")){
-				max = guess-1;
-				guess = min + (max-min)/2;
+			if (game.getMessage().contains("too large")) {
+				max = guess - 1;
+				guess = min + (max - min) / 2;
 			}
-			if(game.getMessage().contains("too small")){
-				min = guess+1;
-				guess = min + (max-min)/2;
+			if (game.getMessage().contains("too small")) {
+				min = guess + 1;
+				guess = min + (max - min) / 2;
 			}
 		}
 		return guess;

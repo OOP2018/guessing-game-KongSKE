@@ -5,8 +5,8 @@
 public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 100;
-		NumberGame game = new GuessingGame(upperBound);
+		int upperBound = 1;
+		NumberGame game = new VaritGame(upperBound);
 //		GameConsole ui = new GameConsole( );
 //		int solution = ui.play( game );
 
