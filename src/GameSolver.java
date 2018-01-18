@@ -18,11 +18,12 @@ public class GameSolver {
 	 * @return the secret number.
 	 */
 	public int play(NumberGame game) {
+		
 		int min = 1;
 		int max = game.getUpperBound();
 		int guess = min + (max - min) / 2;
 		while (!game.guess(guess)) {
-			System.out.println(guess);
+			
 			if (game.getMessage().contains("too large")) {
 				max = guess - 1;
 				guess = min + (max - min) / 2;

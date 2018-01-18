@@ -5,7 +5,7 @@
 public class Main {
 	public static void main(String[] args) {
 		// upper limit for secret number in guessing game
-		int upperBound = 1;
+		int upperBound = 100;
 		NumberGame game = new VaritGame(upperBound);
 //		GameConsole ui = new GameConsole( );
 //		int solution = ui.play( game );
@@ -14,7 +14,8 @@ public class Main {
 
 		GameSolver ai = new GameSolver();
 		int bot = ai.play(game);
-		System.out.println("The answer is "+bot);
+		System.out.println("Count: " + game.getCount());
+		System.out.println("The answer is " + bot);
 		
 	}
 }
