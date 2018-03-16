@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GuessingController">
+   <children>
+      <FlowPane alignment="CENTER" prefHeight="208.0" prefWidth="427.0">
+         <children>
+            <Label alignment="CENTER" text="Guessing Game" textAlignment="CENTER" textFill="#1039eb">
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+               <font>
+                  <Font size="62.0" />
+               </font>
+            </Label>
+            <Label text="your guess:" textFill="#1abf22">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <TextField fx:id="answer" alignment="CENTER" onAction="#handleCheck" prefHeight="32.0" prefWidth="235.0" promptText="Enter your guess" />
+            <Label fx:id="status" alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="367.0" text="True or False?" textAlignment="CENTER" textFill="#f00c33">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="check" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCheck" text="Check" textAlignment="CENTER">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="clear" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleClear" text="Clear" textAlignment="CENTER">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+            <Button fx:id="giveup" mnemonicParsing="false" onAction="#handleGiveUp" text="Give Up">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Button>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

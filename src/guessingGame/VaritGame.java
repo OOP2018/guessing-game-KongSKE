@@ -1,3 +1,4 @@
+package guessingGame;
 import java.util.Random;
 
 /**
@@ -11,6 +12,7 @@ public class VaritGame extends NumberGame {
 	private int secret;
 	private String message;
 	private int counter;
+	private int answer;
 
 	/**
 	 * 
@@ -33,12 +35,18 @@ public class VaritGame extends NumberGame {
 		this.counter += 1;
 		if (number == this.secret) {
 			super.setMessage("Correct, the secret is " + this.secret);
+			setChanged();
+			notifyObservers(number);
 			return true;
 		} else if (number < this.secret) {
 			super.setMessage("Sorry, too small.");
+			setChanged();
+			notifyObservers(number);
 			return false;
 		} else {
 			super.setMessage("Sorry, too large.");
+			setChanged();
+			notifyObservers(number);
 			return false;
 		}
 	}
@@ -77,5 +85,9 @@ public class VaritGame extends NumberGame {
 		// get a random number between 0 and 9. Add 1 so the value is 1 - 10.
 		int value = rand.nextInt(limit) + 1;
 		return value;
+	}
+
+	public int getSecret() {
+		return this.secret;
 	}
 }
